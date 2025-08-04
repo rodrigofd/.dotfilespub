@@ -10,7 +10,7 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 [See the list](installed-apps.md)
 
-As an examnple this command will install VS 2022 Community with the desktop C++ workload.
+## Install VS 2022 Community with the desktop C++ workload
 
 ```powershell
 winget install Microsoft.VisualStudio.2022.Community --silent --override "--wait --quiet --add ProductLang En-us --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended"
