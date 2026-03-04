@@ -1,4 +1,101 @@
-body
+/* ==UserStyle==
+@name           * Default scrollbar style - all sites (with exc)
+@namespace      github.com/openstyles/stylus
+@version        1.0.1
+@description    * Default scrollbar style - all sites (with exc)
+@author         rodrigofdw
+==/UserStyle== */
+/* SCROLLBARS CUSTOMIZATION */
+/* Reset any scrollbar custom styling that the website might apply */
+:root
 {
-  background: blue !important
+  --width: 23px;
+  --height: 23px;
+  --border-radius: 9px;
+  --button-bg-color: silver;
+  --button-border-color: #9999998a;
+  --button-hover-bg-color: #b0b0b0;
+  --button-active-bg-color: #999;
+  --thumb-bg-color: #c0c0c0;
+  --thumb-hover-bg-color: #a0a0a0;
+  --thumb-active-bg-color: #888;
+  --thumb-border-color: #e0e0e0;
+  --track-bg-color: #f0f0f0;
+  --track-border-color: #ddd;
+  --btn-border-style: 3px solid;
+}
+
+*
+{
+  scrollbar-width: unset !important;
+  scrollbar-color: unset !important;
+}
+
+::-webkit-scrollbar
+{
+  width: var(--width) !important;
+  height: var(--height) !important;
+}
+
+::-webkit-scrollbar-button
+{
+  display: none !important;
+  width: var(--width) !important;
+  height: var(--height) !important;
+  background-color: var(--button-bg-color) !important;
+  border: 0px solid var(--button-border-color) !important;
+  border-radius: var(--border-radius) !important;
+}
+
+::-webkit-scrollbar-button:hover
+{
+  background-color: var(--button-hover-bg-color) !important;
+  border: var(--btn-border-style) var(--button-border-color) !important;
+}
+
+::-webkit-scrollbar-button:active
+{
+  background-color: var(--button-active-bg-color) !important;
+  border: var(--btn-border-style) #4b4b4b57 !important;
+}
+
+::-webkit-scrollbar-button:end:increment,
+::-webkit-scrollbar-button:start:decrement
+{
+  display: none !important;
+}
+
+::-webkit-scrollbar-track
+{
+  background-color: var(--track-bg-color) !important;
+  border: 1px solid var(--track-border-color) !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1) !important;
+}
+
+::-webkit-scrollbar-thumb
+{
+  width: var(--width) !important;
+  height: var(--height) !important;
+  background-color: var(--thumb-bg-color) !important;
+  border-radius: var(--border-radius) !important;
+  border: var(--btn-border-style) var(--thumb-border-color) !important;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  background-color: var(--thumb-hover-bg-color) !important;
+  border: var(--btn-border-style) var(--thumb-border-color) !important;
+}
+
+::-webkit-scrollbar-thumb:active
+{
+  background-color: var(--thumb-active-bg-color) !important;
+  border: var(--btn-border-style) #d0d0d0 !important;
+}
+
+::-webkit-scrollbar-corner
+{
+  background-color: var(--track-bg-color) !important;
+  border: var(--btn-border-style) var(--track-border-color) !important;
 }
