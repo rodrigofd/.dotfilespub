@@ -1,0 +1,24 @@
+/* ==UserStyle==
+@name           * Stylus Extension Own UI
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    * Stylus Extension Own UI
+@author         rodrigofdw
+==/UserStyle== */
+@-moz-document regexp("^\\w+-extension://clngdbkpkpeebahjckkjfobafhncgmne.*")
+{
+  body
+  {
+    font-family: "SF Pro Display" !important;
+  }
+
+  div.CodeMirror 
+  {
+    font-family: FiraCode Nerd Font !important;
+    font-size: 12px;
+    font-variant: common-ligatures !important;
+    letter-spacing: -0.27px;
+    background: white !important;
+  }
+
+}
